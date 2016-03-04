@@ -1,0 +1,20 @@
+body {
+  background-image: url(/images/brown-216001_1920.jpg);
+  font: 22px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  padding: 30px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+  margin-bottom:0em;
+} 
+
+p {
+  margin-top:0em;
+  margin-botton:1em;
+} 
+
