@@ -4,7 +4,8 @@ var app = require('../app');
 var debug = require('debug')('getmyip:server');
 var http = require('http');
 
-var port = normalizePort(process.env.PORT || '3000');
+// Default port is 8081 as the default deployment is AWS Elastic Beanstalk
+var port = normalizePort(process.env.PORT || '8081');
 app.set('port', port);
 
 var server = http.createServer(app);
