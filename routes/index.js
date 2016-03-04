@@ -11,4 +11,9 @@ router.get('/', function(req, res) {
     })
 });
 
+// Health Check
+router.get('/health', function(req, res) {
+    res.send('Moovelous');
+});
+
 module.exports = router;

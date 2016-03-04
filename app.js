@@ -48,7 +48,7 @@ if (app.get('env') === 'development') {
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
-        message: 'Not Found: Mooove On Nothing to See Here',
+        message: 'Not Found: Moove On Nothing to See Here',
         error: {}
     });
 });
