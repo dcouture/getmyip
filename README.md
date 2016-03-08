@@ -38,6 +38,13 @@ Health page test
 
 # Automated Elastic Beanstalk Deployment
 
+Production automated deployment shows examples of:
+* Setting an ELB health check in configuration
+* Setting a SNS topic for notifications
+* Setting enhanced health checking of the instances and environment
+* Setting a basic alarm, in this case number of nodes less than one
+ 
+
 ### Prerequisites
 
 * Working AWS Elastic Beanstalk CLI http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html
