@@ -6,15 +6,15 @@ A project in node.js and express to return the requestors client ip address.
 
 ### Prerequisites
 
-node.js (tested on 4.3.2)
-npm
+* node.js (tested on 4.3.2)
+* npm
 
 ### Local development environment:
 
 Clone getmyip repository:
-git clone https://github.com/dcouture/getmyip
-cd getmyip
-npm install
+* git clone https://github.com/dcouture/getmyip
+* cd getmyip
+* npm install
 
 NODE_ENV=development npm start
 or
