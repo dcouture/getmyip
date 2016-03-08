@@ -15,16 +15,16 @@ A project in node.js and express to return the requestors client ip address.
 * cd getmyip
 * npm install
 
-Run the web application locally: 
+Run the web application locally:  
 NODE_ENV=development npm start  
 or  
 NODE_ENV=production npm start
 
-Application is available on http://<ipaddress>:8081
+Application is available on http://"<ipaddress>":8081
 
 ## Running the tests
 
-Run the web tests locally: 
+Run the web tests locally:  
 NODE_ENV=development npm test  
 or  
 NODE_ENV=production npm test
@@ -65,7 +65,7 @@ Example:
 ```
 eb create getmyip-prod --cname ipcow --cfg getmyip-prod
 ```
-Application is available on http://<cname-prefix>.<region>..elasticbeanstalk.com 
+Application is available on http://"<cname-prefix>.<region>".elasticbeanstalk.com 
 
 ## Authors
 
