@@ -49,7 +49,7 @@ Health page test
 Default global application setup: getmyip/.elasticbeanstalk/config.yml can be adjusted as desired.  
 Default environment setup: getmyip/.elasticbeanstalk/getmyip-`<env>` can be adjusted as desired.
 
-####Clone the repo is necessary and checkout whatever branch if you do not want to deploy master.
+####Clone the repo if necessary and checkout a branch if you do not want to deploy master.
 * git clone https://github.com/dcouture/getmyip
 * cd getmyip
 
