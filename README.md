@@ -24,12 +24,12 @@ Application is available on http://<ipaddress>:8081
 
 ## Running the tests
 
-NODE_ENV=development npm test
-or
-NODE_ENV=production npm test
+NODE_ENV=development npm test  
+or  
+NODE_ENV=production npm test  
 
+Tests:  
 ```
-Tests:
 Positive test for home page available
 Negative test when home page is unavailable
 Health page test
@@ -39,28 +39,29 @@ Health page test
 
 ### Prerequisites
 
-Working AWS Elastic Beanstalk CLI http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html
-node.js (tested on 4.3.2)
-npm
+* Working AWS Elastic Beanstalk CLI http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html
+* node.js (tested on 4.3.2)
+* npm
 
 ### Elastic Beanstalk Deployment
 
-Default global application setup: getmyip/.elasticbeanstalk\config.yml can be adjusted as desired.
+Default global application setup: getmyip/.elasticbeanstalk\config.yml can be adjusted as desired.  
 Default environment setup: getmyip/.elasticbeanstalk\getmyip-<env>.yml can be adjusted as desired.
 
 ####Create Application
-eb init <application_name> --platform <platform>
+eb init <application_name> --platform <platform>  
 
+Example:  
 ```
-Ex:
 eb init getmyip --platform node.js
 ```
 
 ####Create environment
-eb create <environment> --cname <cname-prefix> --cfg <environment config file>
+eb create <environment> --cname <cname-prefix> --cfg <environment config file>  
+
+Example:  
 
 ```
-Ex:
 eb create getmyip-prod --cname ipcow --cfg getmyip-prod
 ```
 Application is available on http://<cname-prefix>.<region>..elasticbeanstalk.com 
