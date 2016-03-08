@@ -61,7 +61,7 @@ Example:
 eb init getmyip --platform node.js
 ```
 
-####Create environment
+####Create environment (application is deployed automatically when creating the environment)
 eb create `<environment>` --cname `<cname-prefix>` --cfg `<environment config file>`  
 
 Example:
