@@ -1,0 +1,13 @@
+branch-defaults:
+  master:
+    environment: null
+    group_suffix: null
+  productionV1.0.1:
+    environment: getmyip-prod
+global:
+  application_name: getmyip
+  default_ec2_keyname: null
+  default_platform: node.js
+  default_region: us-west-2
+  profile: eb-cli
+  sc: git
