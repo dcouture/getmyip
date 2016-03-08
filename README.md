@@ -16,8 +16,8 @@ Clone getmyip repository:
 * cd getmyip
 * npm install
 
-NODE_ENV=development npm start
-or
+NODE_ENV=development npm start  
+or  
 NODE_ENV=production npm start
 
 Application is available on http://<ipaddress>:8081
@@ -26,9 +26,9 @@ Application is available on http://<ipaddress>:8081
 
 NODE_ENV=development npm test  
 or  
-NODE_ENV=production npm test  
+NODE_ENV=production npm test
 
-Tests:  
+Tests:
 ```
 Positive test for home page available
 Negative test when home page is unavailable
@@ -51,7 +51,7 @@ Default environment setup: getmyip/.elasticbeanstalk\getmyip-<env>.yml can be ad
 ####Create Application
 eb init <application_name> --platform <platform>  
 
-Example:  
+Example:
 ```
 eb init getmyip --platform node.js
 ```
@@ -59,7 +59,7 @@ eb init getmyip --platform node.js
 ####Create environment
 eb create <environment> --cname <cname-prefix> --cfg <environment config file>  
 
-Example:  
+Example:
 
 ```
 eb create getmyip-prod --cname ipcow --cfg getmyip-prod
