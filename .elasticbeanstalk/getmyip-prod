@@ -1,0 +1,42 @@
+EnvironmentConfigurationMetadata:
+  Description: Production GetMyIP Application
+  DateCreated: '1457460644000'
+  DateModified: '1457460644000'
+SolutionStack: 64bit Amazon Linux 2015.09 v2.0.8 running Node.js
+OptionSettings:
+  aws:elasticbeanstalk:command:
+    BatchSize: '30'
+    BatchSizeType: Percentage
+  aws:elasticbeanstalk:sns:topics:
+    Notification Endpoint: support@example.com
+  aws:elasticbeanstalk:container:nodejs:
+    NodeCommand: npm start
+  aws:elb:policies:
+    ConnectionDrainingEnabled: true
+    ConnectionDrainingTimeout: '20'
+  aws:elb:loadbalancer:
+    CrossZone: true
+  aws:elasticbeanstalk:application:environment:
+    NODE_ENV: production
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+  aws:elasticbeanstalk:application:
+    Application Healthcheck URL: /health
+  aws:elasticbeanstalk:healthreporting:system:
+    AWSEBHealthdGroupId: 440a7934-957a-4129-af24-ff68fc6fad82
+    SystemType: enhanced
+  aws:autoscaling:launchconfiguration:
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: t1.micro
+    EC2KeyName: ''
+  aws:elasticbeanstalk:container:nodejs:staticfiles:
+    /public: /public
+  aws:autoscaling:updatepolicy:rollingupdate:
+    RollingUpdateType: Health
+    RollingUpdateEnabled: true
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+AWSConfigurationTemplateVersion: 1.1.0.0
+Tags:
+  NODE_ENV: production

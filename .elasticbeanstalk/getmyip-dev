@@ -1,0 +1,30 @@
+EnvironmentConfigurationMetadata:
+  Description: Development GetMyIP Application
+  DateCreated: '1457461958000'
+  DateModified: '1457461958000'
+SolutionStack: 64bit Amazon Linux 2015.09 v2.0.8 running Node.js
+OptionSettings:
+  aws:elasticbeanstalk:sns:topics:
+    Notification Endpoint: dev@example.com
+  aws:elasticbeanstalk:container:nodejs:
+    NodeCommand: npm start
+  aws:elasticbeanstalk:application:environment:
+    NODE_ENV: development
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+    EnvironmentType: SingleInstance
+  aws:elasticbeanstalk:healthreporting:system:
+    AWSEBHealthdGroupId: 6edcb2a3-b9d5-44f8-ab57-2089ad948840
+    SystemType: basic
+  aws:autoscaling:launchconfiguration:
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: t1.micro
+    EC2KeyName: ''
+  aws:elasticbeanstalk:container:nodejs:staticfiles:
+    /public: /public
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+AWSConfigurationTemplateVersion: 1.1.0.0
+Tags:
+  NODE_ENV: development
