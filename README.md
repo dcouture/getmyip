@@ -4,7 +4,7 @@ A project in node.js and express to return the requestors client ip address.
 
 ## Getting Started
 
-### Prerequisities
+### Prerequisites
 
 node.js (tested on 4.3.2)
 npm
@@ -31,13 +31,13 @@ NODE_ENV=production npm test
 ```
 Tests:
 Positive test for home page available
-Negative test when home page is unavaialble
+Negative test when home page is unavailable
 Health page test
 ```
 
 ## Automated Elastic Beanstalk Deployment
 
-### Prerequisities
+### Prerequisites
 
 Working AWS Elastic Beanstalk CLI http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html
 node.js (tested on 4.3.2)
@@ -57,7 +57,7 @@ eb init getmyip --platform node.js
 ```
 
 ####Create environment
-eb create <enironment> --cname <cname-prefix> --cfg <environment config file>
+eb create <environment> --cname <cname-prefix> --cfg <environment config file>
 
 ```
 Ex:
