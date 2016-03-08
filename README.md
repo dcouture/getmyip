@@ -2,7 +2,7 @@
 
 A project in node.js and express to return the requestors client ip address.
 
-## Getting Started
+# Getting Started
 
 ### Prerequisites
 
@@ -36,7 +36,7 @@ Negative test when home page is unavailable
 Health page test
 ```
 
-## Automated Elastic Beanstalk Deployment
+# Automated Elastic Beanstalk Deployment
 
 ### Prerequisites
 
@@ -47,10 +47,10 @@ Health page test
 ### Elastic Beanstalk Deployment
 
 Default global application setup: getmyip/.elasticbeanstalk/config.yml can be adjusted as desired.  
-Default environment setup: getmyip/.elasticbeanstalk/getmyip-<env>.yml can be adjusted as desired.
+Default environment setup: getmyip/.elasticbeanstalk/getmyip-`<env>`.yml can be adjusted as desired.
 
 ####Create Application
-eb init <application_name> --platform <platform>  
+eb init `<application_name>` --platform <platform>  
 
 Example:
 ```
@@ -58,7 +58,7 @@ eb init getmyip --platform node.js
 ```
 
 ####Create environment
-eb create <environment> --cname <cname-prefix> --cfg <environment config file>  
+eb create `<environment>` --cname `<cname-prefix>` --cfg `<environment config file>`  
 
 Example:
 
