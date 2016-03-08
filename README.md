@@ -22,7 +22,7 @@ NODE_ENV=production npm start
 
 Application is available on http://`<ipaddress>`:8081
 
-## Running the tests
+### Running the tests
 
 Run the unit tests locally:  
 NODE_ENV=development npm test  
@@ -46,10 +46,10 @@ Health page test
 
 ### Elastic Beanstalk Deployment
 
-Default global application setup: getmyip/.elasticbeanstalk/config.yml can be adjusted as desired.  
-Default environment setup: getmyip/.elasticbeanstalk/getmyip-`<env>` can be adjusted as desired.
+Default global application setup: getmyip/.elasticbeanstalk/config.yml can be adjusted as desired   
+Default environment setup: getmyip/.elasticbeanstalk/getmyip-`<env>` can be adjusted as desired
 
-####Clone the repo if necessary and checkout a branch if you do not want to deploy master.
+####Clone the repo if necessary and checkout a branch if you do not want to deploy master
 * git clone https://github.com/dcouture/getmyip
 * cd getmyip
 
