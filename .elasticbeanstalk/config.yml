@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: null
+    environment: getmyip-dev
     group_suffix: null
   productionV1.0.1:
     environment: getmyip-prod
