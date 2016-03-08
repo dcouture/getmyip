@@ -20,7 +20,7 @@ NODE_ENV=development npm start
 or  
 NODE_ENV=production npm start
 
-Application is available on http://"<ipaddress>":8081
+Application is available on http://`<ipaddress>`:8081
 
 ## Running the tests
 
@@ -46,8 +46,8 @@ Health page test
 
 ### Elastic Beanstalk Deployment
 
-Default global application setup: getmyip/.elasticbeanstalk\config.yml can be adjusted as desired.  
-Default environment setup: getmyip/.elasticbeanstalk\getmyip-<env>.yml can be adjusted as desired.
+Default global application setup: getmyip/.elasticbeanstalk/config.yml can be adjusted as desired.  
+Default environment setup: getmyip/.elasticbeanstalk/getmyip-<env>.yml can be adjusted as desired.
 
 ####Create Application
 eb init <application_name> --platform <platform>  
@@ -65,7 +65,7 @@ Example:
 ```
 eb create getmyip-prod --cname ipcow --cfg getmyip-prod
 ```
-Application is available on http://"<cname-prefix>.<region>".elasticbeanstalk.com 
+Application is available on http://`<cname-prefix>`.`<region>`.elasticbeanstalk.com 
 
 ## Authors
 
