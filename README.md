@@ -24,7 +24,7 @@ Application is available on http://`<ipaddress>`:8081
 
 ## Running the tests
 
-Run the web tests locally:  
+Run the unit tests locally:  
 NODE_ENV=development npm test  
 or  
 NODE_ENV=production npm test
@@ -32,7 +32,7 @@ NODE_ENV=production npm test
 Tests:
 ```
 Positive test for home page available
-Negative test when home page is unavailable
+Negative test when a requested page is unavailable
 Health page test
 ```
 
@@ -47,7 +47,7 @@ Health page test
 ### Elastic Beanstalk Deployment
 
 Default global application setup: getmyip/.elasticbeanstalk/config.yml can be adjusted as desired.  
-Default environment setup: getmyip/.elasticbeanstalk/getmyip-`<env>`.yml can be adjusted as desired.
+Default environment setup: getmyip/.elasticbeanstalk/getmyip-`<env>` can be adjusted as desired.
 
 ####Create Application
 eb init `<application_name>` --platform <platform>  
