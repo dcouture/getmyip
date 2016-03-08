@@ -14,29 +14,53 @@ OptionSettings:
   aws:elb:policies:
     ConnectionDrainingEnabled: true
     ConnectionDrainingTimeout: '20'
-  aws:elb:loadbalancer:
-    CrossZone: true
   aws:elasticbeanstalk:application:environment:
     NODE_ENV: production
+  aws:elb:loadbalancer:
+    CrossZone: true
   aws:elasticbeanstalk:environment:
     ServiceRole: aws-elasticbeanstalk-service-role
   aws:elasticbeanstalk:application:
     Application Healthcheck URL: /health
   aws:elasticbeanstalk:healthreporting:system:
-    AWSEBHealthdGroupId: 440a7934-957a-4129-af24-ff68fc6fad82
+    AWSEBHealthdGroupId: ebf806e4-87bd-4f3d-81a0-4d870383e87f
     SystemType: enhanced
   aws:autoscaling:launchconfiguration:
     IamInstanceProfile: aws-elasticbeanstalk-ec2-role
     InstanceType: t1.micro
     EC2KeyName: ''
-  aws:elasticbeanstalk:container:nodejs:staticfiles:
-    /public: /public
   aws:autoscaling:updatepolicy:rollingupdate:
     RollingUpdateType: Health
     RollingUpdateEnabled: true
+  aws:elasticbeanstalk:container:nodejs:staticfiles:
+    /public: /public
 EnvironmentTier:
   Type: Standard
   Name: WebServer
+Extensions:
+  NoNodes.EBConsoleSnippet:
+    Order: 500
+    SnippetContents:
+      Resources:
+        NoNodes:
+          Type: AWS::CloudWatch::Alarm
+          Properties:
+            AlarmActions:
+            - arn:aws:sns:us-west-2:700488736558:ElasticBeanstalkNotifications-Environment-getmyip-prod
+            MetricName: EnvironmentHealth
+            ComparisonOperator: LessThanThreshold
+            AlarmDescription: Number of nodes is below 1
+            Statistic: Maximum
+            Period: 300
+            Dimensions:
+            - Value: getmyip-prod
+              Name: EnvironmentName
+            EvaluationPeriods: 1
+            InsufficientDataActions: []
+            Namespace: AWS/ElasticBeanstalk
+            OKActions:
+            - arn:aws:sns:us-west-2:700488736558:ElasticBeanstalkNotifications-Environment-getmyip-prod
+            Threshold: 1
 AWSConfigurationTemplateVersion: 1.1.0.0
 Tags:
   NODE_ENV: production
